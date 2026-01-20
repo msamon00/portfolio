@@ -1,0 +1,171 @@
+/* ====== GLOBAL ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #1a1a1f;
+  color: #f0eaff;
+  line-height: 1.6;
+}
+
+/* ====== NAVBAR ====== */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(20, 20, 30, 0.8);
+  backdrop-filter: blur(6px);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  border-bottom: 2px solid #7a2bf5;
+  z-index: 1000;
+}
+
+#navbar p a {
+  text-decoration: none;
+  color: #f0eaff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+#navbar p a:hover {
+  color: #ff2ec4;
+  text-shadow: 0 0 8px #ff2ec4;
+}
+
+body {
+  padding-top: 70px;
+}
+
+/* ====== WELCOME SECTION ====== */
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: linear-gradient(135deg, #1a1a1f, #241b33, #1a1a1f);
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #f7d86b;
+  text-shadow: 0 0 10px #f7d86b;
+}
+
+#welcome-section h2 {
+  font-size: 1.6rem;
+  color: #7ac6ff;
+  text-shadow: 0 0 8px #188FE0;
+}
+
+/* ====== PROJECTS SECTION ====== */
+#projects {
+  padding: 80px 20px;
+  background: #14141b;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project-tile {
+  background: #1e1e27;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 46, 196, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #3a235a;
+}
+
+.project-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px #ff2ec4, 0 0 32px #7a2bf5;
+}
+
+.project-tile a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #7ac6ff;
+  transition: 0.25s ease;
+}
+
+.project-tile a:hover {
+  color: #ff2ec4;
+  text-shadow: 0 0 10px #ff2ec4;
+}
+
+/* ====== GITHUB LINK ====== */
+#contact {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+#contact-header {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+#contact-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f7d86b;
+  text-shadow: 
+      0 0 8px #f7d86b, 
+      0 0 16px #ff2ec4;
+  letter-spacing: 1px;
+}
+
+.profile-link img {
+  filter: drop-shadow(0 0 12px #7a2bf5);
+  transition: transform 0.25s ease, filter 0.25s;
+}
+
+.profile-link img:hover {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 20px #ff2ec4);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 600px) {
+  #navbar {
+    gap: 20px;
+    padding: 12px;
+  }
+
+  #welcome-section h1 {
+    font-size: 2.2rem;
+  }
+
+  #welcome-section h2 {
+    font-size: 1.3rem;
+  }
+}
